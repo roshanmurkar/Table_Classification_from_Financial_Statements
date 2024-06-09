@@ -16,7 +16,7 @@ The primary goal of the project is to develop a system that can efficiently clas
 
 5. Model Evaluation: The trained model is evaluated on a test dataset to assess its accuracy and performance in classifying tables into the correct categories.
 
-Scalability and Adaptability: The project is designed to be scalable and adaptable to accommodate new data sources or changes in the classification criteria. It includes a function for preprocessing and predicting on new test data, enabling the system to handle additional data seamlessly.
+6. Scalability and Adaptability: The project is designed to be scalable and adaptable to accommodate new data sources or changes in the classification criteria. It includes a function for preprocessing and predicting on new test data, enabling the system to handle additional data seamlessly.
 
 ### Potential Applications:
 

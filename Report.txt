@@ -1,22 +1,30 @@
-﻿ Report
+﻿Report
+
 Data Science Internship (2024) - Classification of Financial Statement Tables
+
 1. Introduction
 The objective of this assignment is to classify tables extracted from financial statements into five categories: Income Statements, Balance Sheets, Cash Flows, Notes, and Others. This report summarizes the approach taken to preprocess the data, select and train a classification model, and evaluate the model's performance.
+
 2. Data Preprocessing
 The dataset consists of HTML files, each containing tabular data from financial statements. The following steps were undertaken to preprocess the data:
     • Extract Tables: A custom function extract_tables_from_html was developed to parse each HTML file using BeautifulSoup and extract tables using pd.read_html with StringIO.
     • Organize Data: Extracted tables were stored in a dictionary, organized by their respective categories.
     • Text Conversion: Each table was converted to a string representation using the to_string method, forming a corpus of text data.
+
 3. Feature Extraction
     • TfidfVectorizer: A single TfidfVectorizer was fit on the entire corpus of text data from all categories. This ensured that the feature vectors for different categories were consistent in size. The vectorizer transformed the text data into TF-IDF feature vectors.
+
 4. Model Selection and Training
     • Model: A Random Forest Classifier was selected due to its robustness and effectiveness in handling high-dimensional data.
     • Training and Test Split: The dataset was split into training and test sets using an 80-20 split.
     • Training: The classifier was trained on the training set using 100 estimators.
+
 5. Evaluation
     • Metrics: The model's performance was evaluated using accuracy, and a detailed classification report was generated.
     • Results: The model achieved an accuracy of approximately X.X% on the test set. The classification report provided precision, recall, and F1-score for each category.
+
 6. Conclusion
 The Random Forest Classifier effectively classified the tables into the predefined categories with high accuracy. This approach demonstrates the potential of combining text preprocessing techniques with machine learning algorithms for document classification tasks.
+
 7. Future Work
 Further improvements can be made by exploring other feature extraction methods, such as word embeddings, and experimenting with different machine learning models, including deep learning approaches like convolutional neural networks (CNNs) and recurrent neural networks (RNNs).
